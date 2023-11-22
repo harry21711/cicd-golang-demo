@@ -5,11 +5,16 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
 
 func main() {
+
+	buildNumber := os.Getenv("BUILD_NUMBER")
+	log.Printf("drift type: %s", buildNumber)
+
 	r := mux.NewRouter()
 	r.HandleFunc("/", Output)
 	http.Handle("/", r)
