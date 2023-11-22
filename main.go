@@ -15,7 +15,6 @@ func main() {
 	fmt.Println("final end")
 
 	comment := "Update configs"
-	var a, b string = "59", "https"
 	buildNo := os.Getenv("BN")
 	buildURL := os.Getenv("BU")
 	
