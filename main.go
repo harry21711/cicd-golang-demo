@@ -2,9 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"math/rand"
-	"net/http"
 	"os"
 )
 
