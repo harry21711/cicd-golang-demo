@@ -10,9 +10,12 @@ import (
 
 func main() {
 
+	fmt.Println("Start main")
 	buildNumber := os.Getenv("BUILD_NUMBER")
+	fmt.Println("Start End")
 	log.Printf("drift type: %s", buildNumber)
 	fmt.Println("buildNumber : ", buildNumber)
+	fmt.Println("Start End")
 
 	// r := mux.NewRouter()
 	// r.HandleFunc("/", Output)
