@@ -10,12 +10,10 @@ import (
 
 func main() {
 
-	fmt.Println("Start main")
+	log.Printf("Main Start")
 	buildNumber := os.Getenv("BUILD_NUMBER")
-	fmt.Println("Start End")
-	log.Printf("drift type: %s", buildNumber)
-	fmt.Println("buildNumber : ", buildNumber)
-	fmt.Println("Start End")
+	log.Printf("buildNumber : %s", buildNumber)
+	fmt.Println("Main End")
 
 	// r := mux.NewRouter()
 	// r.HandleFunc("/", Output)
@@ -31,4 +29,8 @@ func Output(w http.ResponseWriter, r *http.Request) {
 
 func randomNumbers() int {
 	return rand.Intn(1000)
+}
+
+func add(a, b int) int {
+	return a + b
 }
