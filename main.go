@@ -14,6 +14,7 @@ func main() {
 
 	buildNumber := os.Getenv("BUILD_NUMBER")
 	log.Printf("drift type: %s", buildNumber)
+	fmt.Println("buildNumber : ", buildNumber)
 
 	r := mux.NewRouter()
 	r.HandleFunc("/", Output)
