@@ -5,27 +5,32 @@ import (
 	"os"
 )
 
+var JenkinsBuildInfo string
+
+var BuildURL = os.Getenv("BUILD_URL")
+var BuildNo = os.Getenv("BUILD_NUMBER")
+// var BuildURL = "http://localhost:8080/job/Clone%20Simple/12/"
+// var BuildNo = "12"
+
+func GetJenkinsInfo() string {
+	if BuildNo != "" {
+		JenkinsBuildInfo = JenkinsBuildInfo + "\nBuild No : " + BuildNo
+	}
+	if BuildURL != "" {
+		JenkinsBuildInfo = JenkinsBuildInfo + "\nBuild URL : " + BuildURL
+	}
+	return JenkinsBuildInfo
+}
+
 func main() {
-	fmt.Println("start")
-	for _, env := range os.Environ() {
-		fmt.Println(env)
-	}
-	fmt.Println("end")
-	fmt.Println(os.Getenv("BU"))
-	fmt.Println("final end")
-
+	//fmt.Println("start")
+	//for _, env := range os.Environ() {
+		//fmt.Println(env)
+	//}
+	//fmt.Println("end")
 	comment := "Update configs"
-	buildNo := os.Getenv("BN")
-	buildURL := os.Getenv("BU")
+	comment = comment + GetJenkinsInfo()
 	
-	if buildNo != "" {
-		comment = comment + "\nbuild no : " + buildNo
-	}
-
-	if buildURL != "" {
-		comment = comment + "\nbuild job url : " + buildURL
-	}
-
 	fmt.Println(comment)
 }
 
