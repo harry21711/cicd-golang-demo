@@ -10,6 +10,7 @@ import (
 
 func main() {
 
+	log.Printf
 	log.Printf("Main Start")
 	buildNumber := os.Getenv("BUILD_NUMBER")
 	log.Printf("buildNumber : %s", buildNumber)
