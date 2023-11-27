@@ -7,8 +7,8 @@ import (
 
 var JenkinsBuildInfo string
 
-var BuildURL = os.Getenv("BUILD_URL1")
-var BuildNo = os.Getenv("BUILD_NUMBER1")
+var BuildURL = os.Getenv("BUILD_URL")
+var BuildNo = os.Getenv("BUILD_NUMBER")
 // var BuildURL = "http://localhost:8080/job/Clone%20Simple/12/"
 // var BuildNo = "12"
 
