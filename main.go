@@ -23,14 +23,15 @@ func GetJenkinsInfo() string {
 }
 
 func main() {
-	//fmt.Println("start")
+	fmt.Println("start")
 	//for _, env := range os.Environ() {
 		//fmt.Println(env)
 	//}
-	//fmt.Println("end")
+	
 	comment := "Update configs"
 	comment = comment + GetJenkinsInfo()
 	
 	fmt.Println(comment)
+	fmt.Println("end")
 }
 
